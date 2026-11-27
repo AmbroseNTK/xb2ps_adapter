@@ -46,6 +46,13 @@ provisioning profile; override with `DEVELOPMENT_TEAM` / `BUNDLE_ID` if needed.
 
 `./build.sh --no-sign` only checks that the code compiles.
 
+### Why there is no prebuilt download
+
+Apple only grants the *HID Virtual Device* capability for development provisioning profiles by
+default; it is not available for Developer ID (distribution) profiles without separate approval
+from Apple. A development-signed build only runs on Macs registered in the builder's own
+developer account, so each user has to build and sign the app themselves.
+
 ## How it works
 
 - `Sources/XboxSource.swift` — finds the Xbox controller, maps its state, drives rumble.
