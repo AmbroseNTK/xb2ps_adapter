@@ -1,0 +1,5 @@
+build/
+Xb2PS.xcodeproj/
+Info.plist
+Xb2PS.entitlements
+.DS_Store
